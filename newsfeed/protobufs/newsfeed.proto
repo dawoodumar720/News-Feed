@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package news;
+
+service NewsService {
+    rpc SendNewsURL(NewsRequest) returns (NewsResponse);
+}
+
+message NewsRequest {
+    string news_url = 1;
+}
+
+message NewsResponse {
+    string message = 1;
+}
